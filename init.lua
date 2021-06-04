@@ -35,7 +35,7 @@ function enchanting:get_tooltip(enchant, orig_caps, fleshy)
 	end
 
 	local specs = { -- not finished, to complete
-		durable = {"#00baff", " (+"..bonus.durable.."%)"}, 
+		durable = {"#00baff", " (+"..bonus.durable.."%)"},
 		fast    = {"#74ff49", " (+"..bonus.efficiency.."%)"},
 		sharp   = {"#ffff00", " (+"..bonus.damages.."%)"},
 		strong  = {"#ff3d3d", ""},
@@ -133,7 +133,7 @@ function enchanting.put(_, listname, _, stack)
 	if listname == "mese" and item == "mese_crystal" then
 		return stack:get_count()
 	elseif listname == "tool" and allowed(item) then
-		return 1 
+		return 1
 	end
 	return 0
 end
@@ -313,7 +313,7 @@ enchanting:register_tools("default", {
 	materials = "steel, bronze, mese, diamond",
 	tools = {
 		axe    = {enchants = "durable, fast"},
-		pick   = {enchants = "durable, fast"}, 
+		pick   = {enchants = "durable, fast"},
 		shovel = {enchants = "durable, fast"},
 		sword  = {enchants = "sharp"}
 	}
